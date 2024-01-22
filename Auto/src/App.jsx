@@ -22,13 +22,15 @@ function App() {
     } 
   }
   return (
-    <div  >
+    <div>
+      <h1>Search</h1>
      <input type="text" value={text} onChange={handlechange} onKeyDown={handleEsc}  list='suggest' />
      <datalist id='suggest' >
       {showsuggestion && suggestion.map((el,i)=>(
         <option key={i} value={el.name}></option>
       ))}
      </datalist>
+     <button>Search</button>
     </div>
   )
 }
